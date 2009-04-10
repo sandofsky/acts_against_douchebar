@@ -1,0 +1,37 @@
+ActsAgainstDouchebar
+====================
+
+This plugin adds a special message to DiggBar users.
+
+
+Example
+=======
+
+In your controller:
+
+  class HomepageController < ApplicationController
+
+    acts_against_douchebar
+  
+    def index
+    end
+
+  end
+
+
+  $ curl 'http://localhost:3000/homepage'
+  <h1>This is my regular homepage<h1>
+
+  $curl 'http://localhost:3000/homepage' -e 'http://digg.com/d1oNOZ'
+  &quot;Dear Digg,<br />
+  Framing sites is bullshit.<br />
+  <br />
+  Your pal,
+  <a href="http://daringfireball.net">--J.G.</a>&quot;
+
+
+You can also use:
+
+  acts_against_douchebar :with => "My custom message"
+
+Copyright (c) 2009 Ben Sandofsky, released under the MIT license
