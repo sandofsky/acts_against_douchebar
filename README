@@ -1,7 +1,7 @@
 ActsAgainstDouchebar
 ====================
 
-This plugin adds a special message to DiggBar users.
+This plugin adds a special message to DiggBar users, or runs frame-killer Javascript.
 
 
 Example
@@ -33,5 +33,11 @@ In your controller:
 You can also use:
 
   acts_against_douchebar :with => "My custom message"
+  
+for a custom message, or:
+
+  acts_against_douchebar :with => :frame_killer
+  
+to run a frame-killer.
 
 Copyright (c) 2009 Ben Sandofsky, released under the MIT license
