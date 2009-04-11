@@ -12,7 +12,6 @@ class ActionController::Base
   end
   private
   def acts_against_douchbar_filter
-    logger.info("Referrer: #{request.referer}")
     if request.referer =~ %r{http://digg.com/\w{1,8}/*(\?.*)?$}
       render :text => @@douchbar_filter_message
       return false
